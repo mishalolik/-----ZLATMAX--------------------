@@ -1,11 +1,19 @@
-.div1 {
+.header_row {
     background-color: black;
     color: white;
     height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 171px;
+    padding-right: 168px;
+
+
 }
 
-.div2 {
-    margin-left: 171px;
+.header_row_menu_nav {
+
     display: flex;
     gap: 60px;
     font-family: Montserrat;
@@ -14,18 +22,24 @@
 
     line-height: 100%;
     letter-spacing: 0%;
-    width: auto;
-    padding-top: 10px;
+    align-items: center;
 
 
 }
 
 
 
-.div3 {
+.header_row_account {
     display: flex;
-    justify-content: right;
-    margin-left: 847px;
+    align-items: center;
+
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+
 }
 
 .div4 {
@@ -108,5 +122,5 @@
     line-height: 100%;
     letter-spacing: 0%;
     width: auto;
-    
+
 }
