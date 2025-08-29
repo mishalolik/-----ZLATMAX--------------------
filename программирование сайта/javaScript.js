@@ -100,19 +100,18 @@ const knives = [
         image: "images/lis-trail.svg"
     }
 ];
-let di = document.getElementById('di')
-let d1 = document.getElementById('d1')
-let but1 = document.getElementById('but1')
-let index = 0;
-for (knife of knives) {
-    
-    index+=1;
-    let div = document.createElement('div')
-    div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 470px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;'
-    div.innerHTML = `
+
+
+function getKnives(lastIndex, container) {
+    let end = Math.min(lastIndex + 4, knives.length);
+    for (let index = lastIndex; index < end; index++) {
+        let knife = knives[index];
+        let div = document.createElement('div');
+        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 470px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;'
+        div.innerHTML = `
         <img src='${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
         
-        <div style="display:flex;flex-direction:column;margin-left:10px;">
+        <div style="display:flex;flex-direction:column;margin-left:10px">
         <h3 style="font-family: Montserrat;font-weight: 600;font-size: 20px;">${knife.name}</h3>
             <p style='color: #ABABAB;'>Metal: <b>${knife.metal}</b></p>
             <p style='color: #9536d4ff;'>Длина: ${knife.size / 10} cm</p>
@@ -129,18 +128,36 @@ for (knife of knives) {
         </div>
         <button style='width: 235px;height: 50px;background-color:background-color: #E8AA31;margin-top:30px;font-family: Montserrat;font-weight: 600;font-size: 18px;margin-left:15px;'>в корзину🛒</button>
     `
-    but1.addEventListener('click', () => {
-
-    })
 
 
-    d1.append(div)
 
-    
+
+        container.append(div)
 
 
 
 
 
 
+
+
+    }
+    return end;
 }
+
+
+
+let di = document.getElementById('di');
+let d1 = document.getElementById('d1');
+
+let but1 = document.getElementById('but1');
+let lastIndex = 0;
+lastIndex = getKnives(lastIndex, d1);
+
+
+
+
+
+// but1.addEventListener('click', () => {
+
+// })
