@@ -101,29 +101,35 @@ const knives = [
     }
 ];
 function getRandom(min, max) {
-  min = Math.ceil(min); // Ensure min is an integer
-  max = Math.floor(max); // Ensure max is an integer
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let result = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (result < 10) result = '0' + result;
+    return result;
 }
 let newDate = new Date()
 const news = [
-    { image: "images/rectangle 42",
+    {
+        image: "images/rectangle 42",
         content: "Все о ножах: как правильно выбрать",
-        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
-    { image: "images/rectangle 43",
+    {
+        image: "images/rectangle 43",
         content: "Как правильно выбрать фонарь",
-        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
-    { image: "images/rectangle 44",
-        content: "ножи для охотников",
-        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+    {
+        image: "images/rectangle 44",
+        content: "Ножи для охотников",
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
-    { image: "images/rectangle 45",
+    {
+        image: "images/rectangle 45",
         content: "Кухонные ножи для хозяек",
-        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     }
-    
+
 ];
 
 function getKnives(lastIndex, container, fop) {
@@ -207,8 +213,8 @@ lastIndex = getKnives(lastIndex, d1, 4);
 
 let d10 = document.getElementById('d10');
 let d11 = document.getElementById('d11');
-lastIndex = getKnives(4, d10,3);
-lastIndex = getKnives(6, d11,4);
+lastIndex = getKnives(4, d10, 3);
+lastIndex = getKnives(6, d11, 4);
 let d12 = document.getElementById('d12')
 getNews(0, d12, 4)
 
