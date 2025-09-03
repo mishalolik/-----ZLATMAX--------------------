@@ -402,7 +402,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
-    
+
 }
 
 .item {
@@ -457,14 +457,41 @@ hr {
 }
 
 .item:hover {
-    
+
     transform: scale(1.05);
 }
 
 .nm {
-    
+
     color: #14141494;
     font-size: 20px;
-    
+
 }
 
+.df {
+    background-image: url('../images/Mask\ Group.png');
+    height: 761px;
+    color: #fff;
+    display: flex;
+}
+
+.df h3 {
+    font-weight: 900;
+}
+
+.wrappe {
+    display: flex;
+    flex-direction: column;
+    margin-left: 167px;
+    padding-top: 220px;
+}
+
+.nm1 {
+    color: #E8AA31;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 5%;
+
+}

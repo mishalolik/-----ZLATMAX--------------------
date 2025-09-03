@@ -100,34 +100,86 @@ const knives = [
         image: "images/lis-trail.svg"
     }
 ];
+function getRandom(min, max) {
+  min = Math.ceil(min); // Ensure min is an integer
+  max = Math.floor(max); // Ensure max is an integer
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+let newDate = new Date()
+const news = [
+    { image: "images/rectangle 42",
+        content: "Все о ножах: как правильно выбрать",
+        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+    },
+    { image: "images/rectangle 43",
+        content: "Как правильно выбрать фонарь",
+        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+    },
+    { image: "images/rectangle 44",
+        content: "ножи для охотников",
+        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+    },
+    { image: "images/rectangle 45",
+        content: "Кухонные ножи для хозяек",
+        date:getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+    }
+    
+];
 
-
-function getKnives(lastIndex, container) {
-    let end = Math.min(lastIndex + 4, knives.length);
+function getKnives(lastIndex, container, fop) {
+    let end = Math.min(lastIndex + fop, knives.length);
     for (let index = lastIndex; index < end; index++) {
         let knife = knives[index];
         let div = document.createElement('div');
-        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 470px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;'
+        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 275px;height: 470px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
         div.innerHTML = `
         <img src='${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
         
         <div style="display:flex;flex-direction:column;margin-left:10px">
-        <h3 style="font-family: Montserrat;font-weight: 600;font-size: 20px;">${knife.name}</h3>
-            <p style='color: #ABABAB;'>Metal: <b>${knife.metal}</b></p>
+        <h3 style="font-family: Montserrat;font-weight: 600;font-size: 20px;color:black;">${knife.name}</h3>
+            <p style='color: #ABABAB;' >металл: <b>${knife.metal}</b></p>
             <p style='color: #9536d4ff;'>Длина: ${knife.size / 10} cm</p>
-            <p style="color: #ff0000ff;">⭐ ${knife.rating} (${knife.reviews} reviews)</p>
+            <p style="color: #ff0000ff;" id="io">⭐ ${knife.rating} (${knife.reviews} отзывов)</p>
             <hr style="width:250px;">
             
 
         </div>
         <div style="display:flex;margin-left:10px;">
-            <p style="font-family: Montserrat;font-weight: 600;font-size: 20px;">${knife.price} ₽</p>
+            <p style="font-family: Montserrat;font-weight: 600;font-size: 20px;color:black;">${knife.price} ₽</p>
             <div style='display:flex;margin-left:100px;gap:15px;'><img src='images/a.svg'><img src="images/Group (1).svg"></div>
             
             
         </div>
         <button style='width: 235px;height: 50px;background-color:background-color: #E8AA31;margin-top:30px;font-family: Montserrat;font-weight: 600;font-size: 18px;margin-left:15px;'>в корзину🛒</button>
+        
     `
+
+
+
+
+        container.append(div)
+
+
+
+
+
+
+
+
+    }
+    return end;
+}
+function getNews(lastIndex, container, fop) {
+    let end = Math.min(lastIndex + fop, news.length);
+    for (let index = lastIndex; index < end; index++) {
+        let currentNews = news[index];
+        let div = document.createElement('div');
+        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 350px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
+        div.innerHTML = `
+        <img src="${currentNews.image}">
+        <h3>${currentNews.content}</h3>
+        <p>${currentNews.date}</p>
+        `
 
 
 
@@ -146,15 +198,19 @@ function getKnives(lastIndex, container) {
 }
 
 
-
 let di = document.getElementById('di');
 let d1 = document.getElementById('d1');
 
 let but1 = document.getElementById('but1');
 let lastIndex = 0;
-lastIndex = getKnives(lastIndex, d1);
+lastIndex = getKnives(lastIndex, d1, 4);
 
-
+let d10 = document.getElementById('d10');
+let d11 = document.getElementById('d11');
+lastIndex = getKnives(4, d10,3);
+lastIndex = getKnives(6, d11,4);
+let d12 = document.getElementById('d12')
+getNews(0, d12, 4)
 
 
 
