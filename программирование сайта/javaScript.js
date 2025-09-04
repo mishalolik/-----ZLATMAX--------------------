@@ -222,11 +222,11 @@ function getNews(lastIndex, container, fop) {
     for (let index = lastIndex; index < end; index++) {
         let currentNews = news[index];
         let div = document.createElement('div');
-        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 350px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
+        div.style = 'display:flex;flex-direction:column;align-items:start;box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 350px;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
         div.innerHTML = `
         <img src="${currentNews.image}">
-        <h3 style="padding:30px;">${currentNews.content}</h3>
-        <p style="padding-left:30px;display:flex;justify-self:bottom;">${currentNews.date}</p>
+        <h3 style="padding:30px">${currentNews.content}</h3>
+        <p style="padding-left:30px;display:flex;text-align:center;">${currentNews.date}</p>
         `
 
 
