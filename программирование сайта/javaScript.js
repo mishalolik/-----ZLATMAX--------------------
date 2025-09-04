@@ -98,7 +98,49 @@ const knives = [
         reviews: 204,
         price: 5690,
         image: "images/lis-trail.svg"
-    }
+    },
+    [
+        {
+            name: "Lis Trail",
+            size: 215,
+            color: "khaki",
+            metal: "аллюминий",
+            rating: 4.6,
+            reviews: 204,
+            price: 5690,
+            image: "images/lis-trail.svg"
+        },
+        {
+            name: "Lis Trail",
+            size: 215,
+            color: "khaki",
+            metal: "аллюминий",
+            rating: 4.6,
+            reviews: 204,
+            price: 5690,
+            image: "images/lis-trail.svg"
+        },
+        {
+            name: "Lis Trail",
+            size: 215,
+            color: "khaki",
+            metal: "аллюминий",
+            rating: 4.6,
+            reviews: 204,
+            price: 5690,
+            image: "images/lis-trail.svg"
+        },
+        {
+            name: "Lis Trail",
+            size: 215,
+            color: "khaki",
+            metal: "аллюминий",
+            rating: 4.6,
+            reviews: 204,
+            price: 5690,
+            image: "images/lis-trail.svg"
+        }
+    ]
 ];
 function getRandom(min, max) {
     min = Math.ceil(min);
@@ -110,22 +152,22 @@ function getRandom(min, max) {
 let newDate = new Date()
 const news = [
     {
-        image: "images/rectangle 42",
+        image: "images/Rectangle 42.png",
         content: "Все о ножах: как правильно выбрать",
         date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
     {
-        image: "images/rectangle 43",
+        image: "images/Rectangle 43.png",
         content: "Как правильно выбрать фонарь",
         date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
     {
-        image: "images/rectangle 44",
+        image: "images/Rectangle 44.png",
         content: "Ножи для охотников",
         date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
     {
-        image: "images/rectangle 45",
+        image: "images/Rectangle 45.png",
         content: "Кухонные ножи для хозяек",
         date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     }
@@ -183,8 +225,8 @@ function getNews(lastIndex, container, fop) {
         div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 350px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
         div.innerHTML = `
         <img src="${currentNews.image}">
-        <h3>${currentNews.content}</h3>
-        <p>${currentNews.date}</p>
+        <h3 style="padding:30px;">${currentNews.content}</h3>
+        <p style="padding-left:30px;display:flex;justify-self:bottom;">${currentNews.date}</p>
         `
 
 
