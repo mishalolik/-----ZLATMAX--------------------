@@ -101,47 +101,89 @@ const knives = [
     },
     [
         {
-            name: "Lis Trail",
-            size: 215,
+            name: "Coa coser",
+            size: 40,
             color: "khaki",
-            metal: "аллюминий",
-            rating: 4.6,
-            reviews: 204,
-            price: 5690,
-            image: "images/lis-trail.svg"
+            metal: "пластик",
+            rating: 4.5,
+            reviews: 637,
+            price: 640,
+            image: "images/d.webp"
         },
         {
-            name: "Lis Trail",
-            size: 215,
+            name: "gos bole",
+            size: 135,
             color: "khaki",
-            metal: "аллюминий",
-            rating: 4.6,
-            reviews: 204,
-            price: 5690,
-            image: "images/lis-trail.svg"
+            metal: "пластик, стекло",
+            rating: 4.8,
+            reviews: 1964,
+            price: 2290,
+            image: "images/g.jpg"
         },
         {
-            name: "Lis Trail",
-            size: 215,
+            name: "Lis ulic",
+            size: 65,
             color: "khaki",
-            metal: "аллюминий",
+            metal: "пластик",
             rating: 4.6,
-            reviews: 204,
-            price: 5690,
-            image: "images/lis-trail.svg"
+            reviews: 1062,
+            price: 590,
+            image: "images/bolt.jpeg"
         },
         {
-            name: "Lis Trail",
-            size: 215,
+            name: "black flashlight",
+            size: 85,
             color: "khaki",
-            metal: "аллюминий",
-            rating: 4.6,
-            reviews: 204,
-            price: 5690,
-            image: "images/lis-trail.svg"
+            metal: "пластик, стекло",
+            rating: 4.9,
+            reviews: 2318,
+            price: 890,
+            image: "images/fonar.png"
         }
     ]
 ];
+let flashlights = [
+    {
+        name: "Coa coser",
+        size: 40,
+        color: "khaki",
+        metal: "пластик",
+        rating: 4.5,
+        reviews: 637,
+        price: 640,
+        image: "images/d.webp"
+    },
+    {
+        name: "gos bole",
+        size: 135,
+        color: "khaki",
+        metal: "пластик, стекло",
+        rating: 4.8,
+        reviews: 1964,
+        price: 2290,
+        image: "images/g.jpg"
+    },
+    {
+        name: "Lis ulic",
+        size: 65,
+        color: "khaki",
+        metal: "пластик",
+        rating: 4.6,
+        reviews: 1062,
+        price: 590,
+        image: "images/bolt.jpeg"
+    },
+    {
+        name: "black flashlight",
+        size: 85,
+        color: "khaki",
+        metal: "пластик, стекло",
+        rating: 4.9,
+        reviews: 2318,
+        price: 890,
+        image: "images/fonar.png"
+    }
+]
 function getRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -163,7 +205,7 @@ const news = [
     },
     {
         image: "images/Rectangle 44.png",
-        content: "Ножи для охотников",
+        content: "Ножи для <br>охотников",
         date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
     },
     {
@@ -244,6 +286,49 @@ function getNews(lastIndex, container, fop) {
     }
     return end;
 }
+function groza(lastIndex, container, fop) {
+    let end = Math.min(lastIndex + fop, flashlights.length);
+    for (let index = lastIndex; index < end; index++) {
+        let knife = flashlights[index];
+        let div = document.createElement('div');
+        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 275px;height: 470px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
+        div.innerHTML = `
+        <img src='${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
+        
+        <div style="display:flex;flex-direction:column;margin-left:10px">
+        <h3 style="font-family: Montserrat;font-weight: 600;font-size: 20px;color:black;">${knife.name}</h3>
+            <p style='color: #ABABAB;' >материал: <b>${knife.metal}</b></p>
+            <p style='color: #9536d4ff;'>Длина: ${knife.size / 10} cm</p>
+            <p style="color: #ff0000ff;" id="io">⭐ ${knife.rating} (${knife.reviews} отзывов)</p>
+            <hr style="width:250px;">
+            
+
+        </div>
+        <div style="display:flex;margin-left:10px;">
+            <p style="font-family: Montserrat;font-weight: 600;font-size: 20px;color:black;">${knife.price} ₽</p>
+            <div style='display:flex;margin-left:100px;gap:15px;'><img src='images/a.svg'><img src="images/Group (1).svg"></div>
+            
+            
+        </div>
+        <button style='width: 235px;height: 50px;background-color:background-color: #E8AA31;margin-top:30px;font-family: Montserrat;font-weight: 600;font-size: 18px;margin-left:15px;'>в корзину🛒</button>
+        
+    `
+
+
+
+
+        container.append(div)
+
+
+
+
+
+
+
+
+    }
+    return end;
+}
 
 
 let di = document.getElementById('di');
@@ -259,7 +344,8 @@ lastIndex = getKnives(4, d10, 3);
 lastIndex = getKnives(6, d11, 4);
 let d12 = document.getElementById('d12')
 getNews(0, d12, 4)
-
+let d111 = document.getElementById('d111')
+groza(0, d111, 4)
 
 
 // but1.addEventListener('click', () => {

@@ -1,6 +1,8 @@
 body {
     font-family: Montserrat;
+
 }
+
 
 h3 {
     font-size: 24px;
@@ -8,6 +10,12 @@ h3 {
 
 h2 {
     font-size: 30px;
+
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 
@@ -499,7 +507,7 @@ hr {
 .button1 {
     background-color: #E8AA31;
     color: white;
-    width: 228px;
+    width: 278px;
     height: 50px;
     border: #E8AA316E;
     font-family: Montserrat;
@@ -507,7 +515,7 @@ hr {
     font-size: 17px;
     line-height: 46px;
     letter-spacing: 0%;
-    margin-top: 60px;
+    margin-top: 30px;
     box-shadow: 0px 4px 20px 0px #E8AA316E;
 
 
@@ -519,4 +527,54 @@ hr {
     gap: 150px;
 
 
+
+}
+
+.dur {
+    background-image: url('../images/Mask\ Group.svg');
+    height: 331px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+
+}
+
+.abc {
+    width: 233px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    color: #FFFFFFCC;
+}
+
+.ab {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    color: #FFFFFFCC;
+}
+
+.abcd {
+    width: 817px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    color: #FFFFFFCC;
+
+}
+
+.abcde {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27px;
+    color: #FFFFFFCC;
 }
