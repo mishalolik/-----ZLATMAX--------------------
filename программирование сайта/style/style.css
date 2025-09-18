@@ -72,6 +72,7 @@ header {
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
+    margin-top: 7px;
 }
 
 .wrapper {
@@ -577,4 +578,60 @@ hr {
     font-size: 14px;
     line-height: 27px;
     color: #FFFFFFCC;
+}
+
+
+
+.img0 {
+    display: none;
+}
+
+.header_row1 {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .div4 {
+        display: none;
+    }
+
+    .img0 {
+        display: block;
+        margin-top: 24px;
+        margin-left: 63px;
+    }
+
+    .header_row {
+        display: none;
+    }
+
+    .header_row1 {
+        display: flex;
+        background-color: black;
+        align-items: center;
+        height: 70px;
+        padding-top: 7px;
+        
+        justify-content: space-around;
+        
+    }
+
+    .header_row1 img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main_div, .div8 {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .main_div div {
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    
 }
