@@ -220,7 +220,7 @@ header {
 .div7 {
     display: flex;
     background-color: #141414;
-    height: 788px;
+
     color: white;
     align-items: normal;
     justify-content: start;
@@ -661,6 +661,7 @@ hr {
         height: 50px;
     }
 
+
     .main_div,
     .div8 {
         display: flex;
@@ -674,6 +675,31 @@ hr {
     .div8 {
         align-items: center;
         gap: 30px;
+    }
+    .div7 {
+        padding: 0;
+    }
+
+    .dog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .go {
+        margin: 0px;
+        width: 250px;
+        height: auto;
+    }
+
+    .main_div, .div8 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px
+    }
+
+    .div8n h3{
+        width: 150px;
     }
 
     .main_div div {
