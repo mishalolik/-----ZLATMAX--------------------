@@ -590,7 +590,46 @@ hr {
     display: none;
 }
 
+.go1 {
+    display: none;
+}
+
+.ggg {
+    width: 330px;
+}
+
+.gap {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fff {
+    display: flex;
+    align-items: center;
+}
+
+#di1 {
+    display: flex;
+    flex-direction: column;
+    margin-top:150px;
+    padding-left: 386px;
+}
+
 @media (max-width:600px) {
+
+    .go {
+        display: none;
+    }
+
+    .go1 {
+        display: flex;
+        width: 260.265869140625px;
+        height: 290px;
+        
+
+
+    }
+
     .div4 {
         display: none;
     }
@@ -599,6 +638,7 @@ hr {
         display: block;
         margin-top: 24px;
         margin-left: 63px;
+
     }
 
     .header_row {
@@ -611,9 +651,9 @@ hr {
         align-items: center;
         height: 70px;
         padding-top: 7px;
-        
+
         justify-content: space-around;
-        
+
     }
 
     .header_row1 img {
@@ -621,17 +661,170 @@ hr {
         height: 50px;
     }
 
-    .main_div, .div8 {
+    .main_div,
+    .div8 {
         display: flex;
         flex-direction: column;
-        
+        text-align: center;
+        gap: 0;
+
+
+    }
+
+    .div8 {
+        align-items: center;
+        gap: 30px;
     }
 
     .main_div div {
-        margin: 0;
         padding: 0;
-        
+        margin-top: 7px;
+        align-items: center;
+
+    }
+
+    .header_main {
+        display: none;
+    }
+
+    .div7 {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 1637px;
+
     }
 
     
+
+    .div7 p, h1 {
+        width: 200px;
+    }
+
+    h1 {
+        text-align: start;
+        font-size: 23px;
+        width: 278px;
+    }
+
+    .h3span3 {
+        font-size: 18px;
+        width: 300px;
+    }
+
+    .p1,
+    .p1 span {
+        color: #FFFFFFB2;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: start;
+        line-height: 24px;
+        letter-spacing: 3%;
+
+
+    }
+
+    .div8n h3 {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 20px;
+
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-align: center;
+
+    }
+
+    .div8n {
+        align-items: center;
+        width: 265px;
+    }
+
+    .dog1 button,
+    .people {
+        display: none;
+    }
+
+    .doc {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        gap: 30px;
+    }
+
+    .item {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .item img {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .ggg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ddd {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gap {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        gap: 30px;
+    }
+
+    .fff {
+        display: none;
+    }
+
+    .fff1 {
+        display: flex;
+        margin-left: 110px;
+        margin-bottom: 30px;
+    }
+
+    .family {
+        width: 300px;
+    }
+
+    .df {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .d10 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrappe {
+        margin: 0;
+        padding: 0;
+    }
+
+    .di {
+        margin: 0;
+        padding: 0;
+    }
+
+    #di1 {
+        margin: 0;
+        padding: 0;
+    }
+
 }
