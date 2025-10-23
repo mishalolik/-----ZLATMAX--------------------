@@ -195,23 +195,23 @@ let newDate = new Date()
 const news = [
     {
         image: "images/Rectangle 42.png",
-        content: "Все о ножах: как правильно выбрать",
-        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        content: "Все о ножах: <br>как правильно выбрать",
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(1998, newDate.getFullYear() - 1)
     },
     {
         image: "images/Rectangle 43.png",
-        content: "Как правильно выбрать фонарь",
-        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        content: "Как правильно <br>выбрать фонарь",
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(1998, newDate.getFullYear() - 1)
     },
     {
         image: "images/Rectangle 44.png",
         content: "Ножи для <br>охотников",
-        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(1998, newDate.getFullYear() - 1)
     },
     {
         image: "images/Rectangle 45.png",
-        content: "Кухонные ножи для хозяек",
-        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(2000, newDate.getFullYear() - 1)
+        content: "Кухонные ножи <br>для хозяек",
+        date: getRandom(1, 31) + "." + getRandom(1, 12) + "." + getRandom(1998, newDate.getFullYear() - 1)
     }
 
 ];
@@ -221,7 +221,7 @@ function getKnives(lastIndex, container, fop) {
     for (let index = lastIndex; index < end; index++) {
         let knife = knives[index];
         let div = document.createElement('div');
-        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 275px;height: 470px;align-items:center;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
+        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 260px;height: 470px;align-items:center;font-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
         div.innerHTML = `
         <img src='${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
         
@@ -230,7 +230,7 @@ function getKnives(lastIndex, container, fop) {
             <p style='color: #ABABAB;' >металл: <b>${knife.metal}</b></p>
             <p style='color: #9536d4ff;'>Длина: ${knife.size / 10} cm</p>
             <p style="color: #ff0000ff;" id="io">⭐ ${knife.rating} (${knife.reviews} отзывов)</p>
-            <hr style="width:250px;">
+            <hr style="width:240px;">
             
 
         </div>
@@ -264,9 +264,9 @@ function getNews(lastIndex, container, fop) {
     for (let index = lastIndex; index < end; index++) {
         let currentNews = news[index];
         let div = document.createElement('div');
-        div.style = 'display:flex;flex-direction:column;align-items:start;box-shadow: 0px 4px 20px 0px #0000001A;width: 375px;height: 350px;padding-left:31pxfont-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
+        div.className = 'log'
         div.innerHTML = `
-        <img src="${currentNews.image}">
+        <img src="${currentNews.image}" style="" class="auto">
         <h3 style="padding:30px">${currentNews.content}</h3>
         <p style="padding-left:30px;display:flex;text-align:center;">${currentNews.date}</p>
         `

@@ -238,7 +238,7 @@ h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-right: 80px;
+
 
 }
 
@@ -611,11 +611,151 @@ hr {
 #di1 {
     display: flex;
     flex-direction: column;
-    margin-top:150px;
+    margin-top: 150px;
     padding-left: 386px;
 }
 
+.telegram {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 166px;
+    padding-right: 166px;
+}
+
+h1 {
+    width: 787px;
+}
+
+.hj {
+    width: 336px;
+}
+
+.fff1 {
+    display: none;
+}
+
+.auto {
+    width: auto;
+}
+
+.jone {
+    margin-top: 60px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 3%;
+}
+
+.hjo, .hjl {
+    display: flex;
+    width: 840px;
+    padding-left: 15px;
+   
+}
+
+.hjo img {
+    width: 300px;
+    height: 250px;
+    align-self: end;
+}
+
+.hjl img {
+    width: 300px;
+    height: 250px;
+    align-self: end;
+}
+
+.log {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-shadow: 0px 4px 20px 0px #0000001A;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.main_div {
+    padding-bottom: 30px;
+}
+
+.family {
+    display: flex;
+    justify-content: space-around;
+    gap: 1000px;
+}
+
+.ligths_categories {
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.go7 {
+    padding-left: 163px;
+}
+
+.go6 {
+    gap: 220px;
+}
+
+
+
+.ffff {
+    width: 1575px;
+}
+
 @media (max-width:600px) {
+
+    .ffff {
+        width: 270px;
+    }
+
+    .go7 hr {
+        width: 270px;
+    }
+
+    .abcd {
+        width: 270px;
+        align-self: center;
+    }
+
+    .novo {
+        width: 270px;
+    }
+
+    .go7 {
+        padding-left: 30px;
+        align-items: center;
+    }
+
+    .go6 {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .auto {
+        width: 275px;
+    }
+
+    .hj {
+        width: 236px;
+    }
+
+    h1 {
+        width: auto;
+    }
+
+    .ddd {
+        display: flex;
+        justify-content: center;
+    }
+
+    .telegram {
+        padding: 0;
+    }
 
     .go {
         display: none;
@@ -625,7 +765,7 @@ hr {
         display: flex;
         width: 260.265869140625px;
         height: 290px;
-        
+
 
 
     }
@@ -677,6 +817,7 @@ hr {
         align-items: center;
         gap: 30px;
     }
+
     .div7 {
         padding: 0;
     }
@@ -692,7 +833,7 @@ hr {
         height: auto;
     }
 
-    .div8n h3{
+    .div8n h3 {
         width: 150px;
     }
 
@@ -709,7 +850,7 @@ hr {
     }
 
     .div7 {
-        padding: 0;
+
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -717,9 +858,10 @@ hr {
 
     }
 
-    
 
-    .div7 p, h1 {
+
+    .div7 p,
+    h1 {
         width: 200px;
     }
 
@@ -771,12 +913,12 @@ hr {
     .doc {
         display: flex;
         flex-direction: column;
-        margin-left: 60px;
+        align-items: center;
         gap: 30px;
     }
 
     .item {
-        width: 290px;
+        width: 250px;
         display: flex;
         flex-direction: column;
         height: auto;
@@ -785,6 +927,7 @@ hr {
     .item img {
         margin: 0;
         padding: 0;
+
 
     }
 
@@ -801,7 +944,7 @@ hr {
     .gap {
         display: flex;
         flex-direction: column;
-        margin-left: 80px;
+        align-items: center;
         gap: 30px;
     }
 
@@ -809,21 +952,38 @@ hr {
         display: none;
     }
 
+    #d12 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+
     .fff1 {
         display: flex;
-        margin-left: 110px;
+        align-self: center;
         margin-bottom: 30px;
+        justify-content: center;
     }
 
     .family {
         width: 300px;
+        text-align: center;
+        
+    }
+
+    .dd {
+        display: flex;
+        flex-direction: column;
     }
 
     .df {
         display: flex;
         flex-direction: column;
         height: auto;
-        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
         margin: 0;
     }
 
@@ -835,6 +995,12 @@ hr {
     .wrappe {
         margin: 0;
         padding: 0;
+
+    }
+
+    .df {
+        background-image: url(../kартинки/MaskGroup1.png);
+        align-items: center;
     }
 
     .di {
@@ -847,4 +1013,87 @@ hr {
         padding: 0;
     }
 
+    #d12 {
+        align-items: center;
+    }
+
+    .kol {
+        padding: 0;
+
+    }
+
+    .log {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        box-shadow: 0px 4px 20px 0px #0000001A;
+        width: 275px;
+        height: 300px;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: white;
+    }
+
+    .ligths_categories {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        
+
+    }
+
+    .w {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .hjo {
+        display: flex;
+        flex-direction: column;
+        width: 270px;
+        height: 620px;
+        padding-left: 10px;
+    }
+
+    .doal {
+        width: 200px;
+    }
+
+    .fg {
+        width: 250px;
+    }
+
+    .button1 {
+        width: 265px;
+    }
+
+    
+
+    .god {
+        width: 200px;
+    }
+
+    #d111 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .dur {
+        height: 1130px;
+        background-image: url(../kартинки/MaskGroup1.png);
+        
+        align-items: center;
+    }
+    
+    .jone {
+        width: 270px;
+    }
+
+    .dur h2 {
+        width: 270px;
+    }
 }
+
