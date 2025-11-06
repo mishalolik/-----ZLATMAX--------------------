@@ -7,7 +7,15 @@ const knives = [
         rating: 4.7,
         reviews: 315,
         price: 5490,
-        image: "images/sokol-urban.jpg"
+        image: "images/sokol-urban.jpg",
+        article: "SU-210-BLK",
+        brand: "Sokol Knives",
+        series: "Urban Line",
+        bonusPoints: 55,
+        steel: ["AUS-8", "95Х18"],
+        handle: ["дерево", "микарта"],
+        guardAndPommel: ["латунь"],
+        bladeFinish: ["сатин", "Stonewash"]
     },
     {
         name: "Taiga Pro",
@@ -17,7 +25,15 @@ const knives = [
         rating: 4.5,
         reviews: 128,
         price: 4290,
-        image: "images/taiga-pro.jpg"
+        image: "images/taiga-pro.jpg",
+        article: "TP-235-OLV",
+        brand: "Taiga",
+        series: "Pro Edition",
+        bonusPoints: 43,
+        steel: ["D2"],
+        handle: ["G10", "резина"],
+        guardAndPommel: ["сталь"],
+        bladeFinish: ["сатин"]
     },
     {
         name: "Vikhr EDC",
@@ -27,7 +43,15 @@ const knives = [
         rating: 4.8,
         reviews: 842,
         price: 5990,
-        image: "images/vikhr-edc.png"
+        image: "images/vikhr-edc.png",
+        article: "VE-195-STL",
+        brand: "Vikhr",
+        series: "Everyday Carry",
+        bonusPoints: 60,
+        steel: ["M390", "D2"],
+        handle: ["титан", "G10"],
+        guardAndPommel: ["титан"],
+        bladeFinish: ["сатин", "полировка"]
     },
     {
         name: "Rys Compact",
@@ -37,7 +61,15 @@ const knives = [
         rating: 4.3,
         reviews: 76,
         price: 2990,
-        image: "images/rys-compact.png"
+        image: "images/rys-compact.png",
+        article: "RC-180-ORG",
+        brand: "Rys",
+        series: "Compact Series",
+        bonusPoints: 30,
+        steel: ["440C"],
+        handle: ["пластик", "дерево"],
+        guardAndPommel: ["алюминий"],
+        bladeFinish: ["Stonewash"]
     },
     {
         name: "Shtorm Trek",
@@ -47,7 +79,15 @@ const knives = [
         rating: 4.9,
         reviews: 1504,
         price: 8990,
-        image: "images/shtorm-trek.jpg"
+        image: "images/shtorm-trek.jpg",
+        article: "ST-225-BLK",
+        brand: "Shtorm",
+        series: "Trek Series",
+        bonusPoints: 90,
+        steel: ["M390", "CPM S35VN"],
+        handle: ["текстолит", "карбон"],
+        guardAndPommel: ["нержавеющая сталь"],
+        bladeFinish: ["чёрное покрытие", "сатин"]
     },
     {
         name: "Berkut Field",
@@ -57,7 +97,15 @@ const knives = [
         rating: 4.6,
         reviews: 263,
         price: 6490,
-        image: "images/berkut-field.jpg"
+        image: "images/berkut-field.jpg",
+        article: "BF-240-SND",
+        brand: "Berkut",
+        series: "Field Line",
+        bonusPoints: 65,
+        steel: ["95Х18"],
+        handle: ["дерево"],
+        guardAndPommel: ["латунь", "медь"],
+        bladeFinish: ["сатин"]
     },
     {
         name: "Neva Lite",
@@ -67,7 +115,15 @@ const knives = [
         rating: 4.2,
         reviews: 58,
         price: 2590,
-        image: "images/neva-lite.jpg"
+        image: "images/neva-lite.jpg",
+        article: "NL-200-BLU",
+        brand: "Neva",
+        series: "Lite Series",
+        bonusPoints: 26,
+        steel: ["420HC"],
+        handle: ["дерево", "резина"],
+        guardAndPommel: ["алюминий"],
+        bladeFinish: ["сатин", "Stonewash"]
     },
     {
         name: "Kedr Hunter",
@@ -77,7 +133,15 @@ const knives = [
         rating: 4.4,
         reviews: 121,
         price: 4790,
-        image: "images/kedr-hunter.webp"
+        image: "images/kedr-hunter.webp",
+        article: "KH-255-BRN",
+        brand: "Kedr",
+        series: "Hunter Line",
+        bonusPoints: 48,
+        steel: ["D2", "95Х18"],
+        handle: ["дерево", "G10"],
+        guardAndPommel: ["сталь"],
+        bladeFinish: ["сатин"]
     },
     {
         name: "Groza One",
@@ -87,7 +151,15 @@ const knives = [
         rating: 4.9,
         reviews: 932,
         price: 14990,
-        image: "images/groza-one.jpg"
+        image: "images/groza-one.jpg",
+        article: "GO-205-GRY",
+        brand: "Groza",
+        series: "One Series",
+        bonusPoints: 150,
+        steel: ["Elmax", "M390"],
+        handle: ["карбон", "титан"],
+        guardAndPommel: ["титан"],
+        bladeFinish: ["полировка", "сатин"]
     },
     {
         name: "Lis Trail",
@@ -97,7 +169,15 @@ const knives = [
         rating: 4.6,
         reviews: 204,
         price: 5690,
-        image: "images/lis-trail.svg"
+        image: "images/lis-trail.svg",
+        article: "LT-215-KHK",
+        brand: "Lis",
+        series: "Trail Series",
+        bonusPoints: 57,
+        steel: ["D2"],
+        handle: ["резина", "алюминий"],
+        guardAndPommel: ["латунь"],
+        bladeFinish: ["сатин", "Stonewash"]
     },
     [
         {
@@ -108,7 +188,15 @@ const knives = [
             rating: 4.5,
             reviews: 637,
             price: 640,
-            image: "images/d.webp"
+            image: "images/d.webp",
+            article: "CC-040-KHK",
+            brand: "Coa",
+            series: "Compact Tools",
+            bonusPoints: 6,
+            steel: ["нет"],
+            handle: ["пластик"],
+            guardAndPommel: ["нет"],
+            bladeFinish: ["глянец"]
         },
         {
             name: "gos bole",
@@ -118,7 +206,15 @@ const knives = [
             rating: 4.8,
             reviews: 1964,
             price: 2290,
-            image: "images/g.jpg"
+            image: "images/g.jpg",
+            article: "GB-135-KHK",
+            brand: "Gos",
+            series: "Bole Series",
+            bonusPoints: 23,
+            steel: ["нет"],
+            handle: ["пластик", "резина"],
+            guardAndPommel: ["нет"],
+            bladeFinish: ["глянец"]
         },
         {
             name: "Lis ulic",
@@ -128,20 +224,37 @@ const knives = [
             rating: 4.6,
             reviews: 1062,
             price: 590,
-            image: "images/bolt.jpeg"
+            image: "images/bolt.jpeg",
+            article: "LU-065-KHK",
+            brand: "Lis",
+            series: "Ulic Tools",
+            bonusPoints: 5,
+            steel: ["нет"],
+            handle: ["пластик"],
+            guardAndPommel: ["нет"],
+            bladeFinish: ["глянец"]
         },
         {
             name: "black flashlight",
             size: 85,
-            color: "khaki",
+            color: "black",
             metal: "пластик, стекло",
             rating: 4.9,
             reviews: 2318,
             price: 890,
-            image: "images/fonar.png"
+            image: "images/fonar.png",
+            article: "BF-085-BLK",
+            brand: "NightFox",
+            series: "Utility",
+            bonusPoints: 9,
+            steel: ["нет"],
+            handle: ["пластик"],
+            guardAndPommel: ["нет"],
+            bladeFinish: ["глянец"]
         }
     ]
 ];
+
 let flashlights = [
     {
         name: "Coa coser",
@@ -221,7 +334,7 @@ function getKnives(lastIndex, container, fop) {
     for (let index = lastIndex; index < end; index++) {
         let knife = knives[index];
         let div = document.createElement('div');
-        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;width: 260px;height: 470px;align-items:center;font-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
+        div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;cursor:pointer;width: 260px;height: 470px;align-items:center;font-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
         div.innerHTML = `
         <img src='${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
         
@@ -243,8 +356,11 @@ function getKnives(lastIndex, container, fop) {
         <button style='width: 235px;height: 50px;background-color:background-color: #E8AA31;margin-top:30px;font-family: Montserrat;font-weight: 600;font-size: 18px;margin-left:15px;'>в корзину🛒</button>
         
     `
-
-
+        div.addEventListener("click", () => {
+            localStorage.setItem("knive_key", JSON.stringify(knife));
+            window.location.href = 'pages/page_1.html';
+            
+        })
 
 
         container.append(div)
@@ -259,6 +375,8 @@ function getKnives(lastIndex, container, fop) {
     }
     return end;
 }
+
+
 function getNews(lastIndex, container, fop) {
     let end = Math.min(lastIndex + fop, news.length);
     for (let index = lastIndex; index < end; index++) {

@@ -1,0 +1,69 @@
+.polage {
+    display: flex;
+    gap: 15px;
+    padding-left: 181px;
+    padding-top: 30px;
+}
+
+#nam {
+    color: #E8AA31;
+}
+
+#img {
+    width: 754px;
+    height: 577px;
+    border-radius: 2px;
+    margin-left: 181px;
+    margin-top: 30px;
+    border: 1px solid black;
+
+}
+
+#img19 {
+    width: 177px;
+    height: 195px;
+    border-radius: 2px;
+    margin-left: 181px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+
+}
+
+.no {
+    width: 806px;
+    height: 788px;
+    box-shadow: 0px 4px 20px 0px #0000001A;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-right: 30px;
+}
+
+#p {
+    margin-top: 33px;
+    font-weight: 700;
+}
+
+.gho img {
+    width: 27px;
+    height: 24px;
+}
+
+.hr {
+    margin-left: 30px;
+    background-color: #14141426;
+    width: 746px;
+    border: 0px;
+    margin-top: 30px;
+}

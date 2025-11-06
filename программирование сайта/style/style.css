@@ -19,9 +19,7 @@ h4 {
 }
 
 
-header {
-    padding-bottom: 30px;
-}
+
 
 .header_row {
     background-color: black;
@@ -698,16 +696,46 @@ h1 {
 }
 
 .go6 {
+    gap: 138px;
+}
+
+.go8 {
     gap: 220px;
 }
 
-
-
 .ffff {
-    width: 1575px;
+    width: 1425px;
+}
+
+.lo {
+        gap: 467px;
+        padding-right: 20px;
+        
+}
+
+.div0 {
+    padding-bottom: 30px;
 }
 
 @media (max-width:600px) {
+
+    .lo {
+        gap: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abcde {
+        width: 275px;
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .abcd {
+        width: auto;
+        height: auto;
+    }
 
     .ffff {
         width: 270px;
