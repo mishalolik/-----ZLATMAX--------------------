@@ -67,3 +67,103 @@ h2 {
     border: 0px;
     margin-top: 30px;
 }
+
+.p10 {
+    display: flex;
+
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-top: 20px;
+
+}
+
+#span {
+    padding-left: 112px;
+}
+
+#span1 {
+    padding-left: 41px;
+}
+
+#span2 {
+    padding-left: 131px;
+}
+
+#span3 {
+    padding-left: 30px;
+}
+
+.fo {
+    margin-left: 30px;
+    padding-top: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fo span {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #14141480;
+
+}
+
+.p11 {
+    display: flex;
+
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+    
+}
+
+.select {
+    height: 40px;
+    width: 534px;
+    
+    
+}
+
+.opt {
+    font-size: 14px;
+    font-weight: 500;
+    color: #14141480;
+}
+
+#sel {
+    margin-left: 157px;
+}
+
+#sel1 {
+    margin-left: 137px;
+}
+
+#sel2 {
+    margin-left: 53px;
+}
+
+#sel3 {
+    margin-left: 45px;
+}
+
+.select:required:invalid {
+color: grey;
+}
+
+.select:not(:required:invalid){
+color: black;
+}
+    
+
