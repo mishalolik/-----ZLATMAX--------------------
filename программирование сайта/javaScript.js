@@ -1,5 +1,6 @@
 const knives = [
     {
+        id: 1,
         name: "Sokol Urban",
         size: 210,
         color: "black",
@@ -15,9 +16,14 @@ const knives = [
         steel: ["AUS-8", "95Х18"],
         handle: ["дерево", "микарта"],
         guardAndPommel: ["латунь"],
-        bladeFinish: ["сатин", "Stonewash"]
+        bladeFinish: ["сатин", "Stonewash"],
+        bladeWidth: 28,
+        bladeLength: 110,
+        overallLength: 210,
+        spineThickness: 3.5
     },
     {
+        id: 2,
         name: "Taiga Pro",
         size: 235,
         color: "olive",
@@ -33,9 +39,14 @@ const knives = [
         steel: ["D2"],
         handle: ["G10", "резина"],
         guardAndPommel: ["сталь"],
-        bladeFinish: ["сатин"]
+        bladeFinish: ["сатин"],
+        bladeWidth: 30,
+        bladeLength: 120,
+        overallLength: 235,
+        spineThickness: 4
     },
     {
+        id: 3,
         name: "Vikhr EDC",
         size: 195,
         color: "steel",
@@ -51,9 +62,14 @@ const knives = [
         steel: ["M390", "D2"],
         handle: ["титан", "G10"],
         guardAndPommel: ["титан"],
-        bladeFinish: ["сатин", "полировка"]
+        bladeFinish: ["сатин", "полировка"],
+        bladeWidth: 27,
+        bladeLength: 95,
+        overallLength: 195,
+        spineThickness: 3.2
     },
     {
+        id: 4,
         name: "Rys Compact",
         size: 180,
         color: "orange",
@@ -69,9 +85,14 @@ const knives = [
         steel: ["440C"],
         handle: ["пластик", "дерево"],
         guardAndPommel: ["алюминий"],
-        bladeFinish: ["Stonewash"]
+        bladeFinish: ["Stonewash"],
+        bladeWidth: 25,
+        bladeLength: 90,
+        overallLength: 180,
+        spineThickness: 2.8
     },
     {
+        id: 5,
         name: "Shtorm Trek",
         size: 225,
         color: "black",
@@ -87,9 +108,14 @@ const knives = [
         steel: ["M390", "CPM S35VN"],
         handle: ["текстолит", "карбон"],
         guardAndPommel: ["нержавеющая сталь"],
-        bladeFinish: ["чёрное покрытие", "сатин"]
+        bladeFinish: ["чёрное покрытие", "сатин"],
+        bladeWidth: 32,
+        bladeLength: 120,
+        overallLength: 225,
+        spineThickness: 4.2
     },
     {
+        id: 6,
         name: "Berkut Field",
         size: 240,
         color: "sand",
@@ -105,9 +131,14 @@ const knives = [
         steel: ["95Х18"],
         handle: ["дерево"],
         guardAndPommel: ["латунь", "медь"],
-        bladeFinish: ["сатин"]
+        bladeFinish: ["сатин"],
+        bladeWidth: 30,
+        bladeLength: 125,
+        overallLength: 240,
+        spineThickness: 4
     },
     {
+        id: 7,
         name: "Neva Lite",
         size: 200,
         color: "blue",
@@ -123,9 +154,14 @@ const knives = [
         steel: ["420HC"],
         handle: ["дерево", "резина"],
         guardAndPommel: ["алюминий"],
-        bladeFinish: ["сатин", "Stonewash"]
+        bladeFinish: ["сатин", "Stonewash"],
+        bladeWidth: 26,
+        bladeLength: 100,
+        overallLength: 200,
+        spineThickness: 3
     },
     {
+        id: 8,
         name: "Kedr Hunter",
         size: 255,
         color: "brown",
@@ -141,9 +177,14 @@ const knives = [
         steel: ["D2", "95Х18"],
         handle: ["дерево", "G10"],
         guardAndPommel: ["сталь"],
-        bladeFinish: ["сатин"]
+        bladeFinish: ["сатин"],
+        bladeWidth: 31,
+        bladeLength: 130,
+        overallLength: 255,
+        spineThickness: 4.1
     },
     {
+        id: 9,
         name: "Groza One",
         size: 205,
         color: "grey",
@@ -159,9 +200,14 @@ const knives = [
         steel: ["Elmax", "M390"],
         handle: ["карбон", "титан"],
         guardAndPommel: ["титан"],
-        bladeFinish: ["полировка", "сатин"]
+        bladeFinish: ["полировка", "сатин"],
+        bladeWidth: 29,
+        bladeLength: 110,
+        overallLength: 205,
+        spineThickness: 3.8
     },
     {
+        id: 10,
         name: "Lis Trail",
         size: 215,
         color: "khaki",
@@ -177,10 +223,16 @@ const knives = [
         steel: ["D2"],
         handle: ["резина", "алюминий"],
         guardAndPommel: ["латунь"],
-        bladeFinish: ["сатин", "Stonewash"]
+        bladeFinish: ["сатин", "Stonewash"],
+        bladeWidth: 27,
+        bladeLength: 115,
+        overallLength: 215,
+        spineThickness: 3.6
     },
+
     [
         {
+            id: 11,
             name: "Coa coser",
             size: 40,
             color: "khaki",
@@ -196,9 +248,14 @@ const knives = [
             steel: ["нет"],
             handle: ["пластик"],
             guardAndPommel: ["нет"],
-            bladeFinish: ["глянец"]
+            bladeFinish: ["глянец"],
+            bladeWidth: 10,
+            bladeLength: 20,
+            overallLength: 40,
+            spineThickness: 1.2
         },
         {
+            id: 12,
             name: "gos bole",
             size: 135,
             color: "khaki",
@@ -214,9 +271,14 @@ const knives = [
             steel: ["нет"],
             handle: ["пластик", "резина"],
             guardAndPommel: ["нет"],
-            bladeFinish: ["глянец"]
+            bladeFinish: ["глянец"],
+            bladeWidth: 12,
+            bladeLength: 30,
+            overallLength: 135,
+            spineThickness: 1.5
         },
         {
+            id: 13,
             name: "Lis ulic",
             size: 65,
             color: "khaki",
@@ -232,9 +294,14 @@ const knives = [
             steel: ["нет"],
             handle: ["пластик"],
             guardAndPommel: ["нет"],
-            bladeFinish: ["глянец"]
+            bladeFinish: ["глянец"],
+            bladeWidth: 9,
+            bladeLength: 25,
+            overallLength: 65,
+            spineThickness: 1.1
         },
         {
+            id: 14,
             name: "black flashlight",
             size: 85,
             color: "black",
@@ -250,10 +317,15 @@ const knives = [
             steel: ["нет"],
             handle: ["пластик"],
             guardAndPommel: ["нет"],
-            bladeFinish: ["глянец"]
+            bladeFinish: ["глянец"],
+            bladeWidth: 8,
+            bladeLength: 30,
+            overallLength: 85,
+            spineThickness: 1.3
         }
     ]
 ];
+
 
 let flashlights = [
     {

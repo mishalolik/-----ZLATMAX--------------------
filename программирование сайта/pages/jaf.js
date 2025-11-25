@@ -57,3 +57,173 @@ knife.bladeFinish.forEach(element => {
     option.textContent = element;
     sel3.append(option);
 });
+
+
+
+let l = document.getElementById('l');
+let po = document.getElementById('po');
+
+let count = Number(l.textContent);
+po.textContent = '+ ' + (knife.bonusPoints * count) + " баллов за покупку";
+
+let m = document.getElementById('m')
+
+let j = document.getElementById('j')
+j.textContent = knife.price + '₽'
+
+let b = document.getElementById('b')
+m.addEventListener("click", () => {
+    if (count > 1) {
+        count--;
+        l.textContent = count;
+    }
+    po.textContent = '+ ' + (knife.bonusPoints * count) + " баллов за покупку";
+    j.textContent = (knife.price * count) + '₽';
+
+})
+b.addEventListener("click", () => {
+    count++;
+    l.textContent = count;
+    po.textContent = '+ ' + (knife.bonusPoints * count) + " баллов за покупку";
+    j.textContent = (knife.price * count) + '₽';
+})
+
+let x = document.getElementById('x');
+let y = document.getElementById('y');
+let z = document.getElementById('z');
+let gom = document.getElementById('gom');
+let d = document.getElementById('d');
+
+x.addEventListener('click', () => {
+    d.innerHTML = '';
+    let p = document.createElement('p');
+    p.className = 'bnm';
+    p.textContent = '???';
+    d.appendChild(p)
+});
+
+y.addEventListener('click', () => {
+    let bland = knife.bladeLength;
+    let text = 'мм'
+    if (bland > 100) {
+        bland /= 10;
+        text = 'см'
+    }
+    d.innerHTML = `<table style="border-collapse: collapse; width: 1000px; height:300px; text-align: center;margin-top:30px">
+        <tr>
+            <th style="border-right: 2px solid grey; padding: 10px;">Технические характеристики</th>
+            <th style="border-right: 2px solid grey;padding:10px">Используемые материалы</th>
+            <th style="padding: 10px;">Производство</th>
+        </tr>
+
+        <tr>
+            <td style="border-right: 2px solid grey; padding-right: 60px;">
+                
+                Общая длина: ${knife.size / 10} см<br>
+                Длина клинка: ${bland} ${text}<br>
+                Ширина клинка: ${knife.bladeWidth} мм<br>
+                Толщина обуха: ${knife.spineThickness * 1000} мкм
+                
+            </td>
+            <td style="border-right: 2px solid grey; padding-left: 60px;padding-right: 60px">
+                Сталь: ${knife.metal}<br>
+                Рукоять: ${knife.handle}
+            </td>
+            <td style="padding-left: 60px;">производство: ${knife.brand}</td>
+        </tr>
+    </table>`;
+
+
+});
+
+z.addEventListener('click', () => {
+    d.innerHTML = `
+        <p>У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!</p>
+        <button>Написать отзыв</button>
+    `
+
+
+
+
+
+
+});
+
+gom.addEventListener('click', () => {
+    
+    d.innerHTML = `
+    <div style="display:flex;padding-bottom:20px;padding-top:30px;">
+            <p class="wi">Ваша страна</p>
+            <select>
+                <option>Россия</option>
+                <option>Казахстан</option>
+                <option>Белоруссия</option>
+            </select>
+        </div>
+    `
+
+    if (select.value == 'Россия') {
+        d.innerHTML += `
+        
+        <div style="display:flex;">
+            <p class="wi">Ваш город</p>
+            <select >
+                <option>Ростов-на-Дону</option>
+                <option>Санкт-Петербург</option>
+                <option>Екатеринбург</option>
+                <option>Волгоград</option>
+                <option>Каменск-Шахтинский</option>
+                <option>Калач-на-Дону</option>
+                <option>Владивосток</option>
+                <option>Москва</option>
+                // <option>Астана</option>
+                // <option>Минск</option>
+                
+            </select>
+        </div>
+    `;
+    } else if (select.value == 'Казахстан') {
+        d.innerHTML += `
+        <div style="display:flex;">
+            <p class="wi">Ваш город</p>
+            <select >
+                // <option>Ростов-на-Дону</option>
+                // <option>Санкт-Петербург</option>
+                // <option>Екатеринбург</option>
+                // <option>Волгоград</option>
+                // <option>Каменск-Шахтинский</option>
+                // <option>Калач-на-Дону</option>
+                // <option>Владивосток</option>
+                // <option>Москва</option>
+                 <option>Астана</option>
+                // <option>Минск</option>
+                
+            </select>
+        </div>
+    `;
+    } else {
+        d.innerHTML += `
+        <div style="display:flex;">
+            <p class="wi">Ваш город</p>
+            <select >
+                // <option>Ростов-на-Дону</option>
+                // <option>Санкт-Петербург</option>
+                // <option>Екатеринбург</option>
+                // <option>Волгоград</option>
+                // <option>Каменск-Шахтинский</option>
+                // <option>Калач-на-Дону</option>
+                // <option>Владивосток</option>
+                // <option>Москва</option>
+                // <option>Астана</option>
+                 <option>Минск</option>
+                
+            </select>
+        </div>
+    `;
+    }
+
+
+});
+
+
+
