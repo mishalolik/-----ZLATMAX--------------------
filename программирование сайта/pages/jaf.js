@@ -149,81 +149,113 @@ z.addEventListener('click', () => {
 
 });
 
+let selectCountry = document.createElement("select");
+
+
 gom.addEventListener('click', () => {
+
+    const citiesOfRussia = ["Ростов-на-Дону", "Санкт-Петербург", "Екатеринбург", "Волгоград"];
     
     d.innerHTML = `
     <div style="display:flex;padding-bottom:20px;padding-top:30px;">
             <p class="wi">Ваша страна</p>
-            <select>
+            <select id="selectCountry">
                 <option>Россия</option>
                 <option>Казахстан</option>
                 <option>Белоруссия</option>
             </select>
         </div>
     `
+    selectCountry = document.getElementById("selectCountry");
 
-    if (select.value == 'Россия') {
-        d.innerHTML += `
-        
-        <div style="display:flex;">
-            <p class="wi">Ваш город</p>
-            <select >
-                <option>Ростов-на-Дону</option>
-                <option>Санкт-Петербург</option>
-                <option>Екатеринбург</option>
-                <option>Волгоград</option>
-                <option>Каменск-Шахтинский</option>
-                <option>Калач-на-Дону</option>
-                <option>Владивосток</option>
-                <option>Москва</option>
-                // <option>Астана</option>
-                // <option>Минск</option>
-                
-            </select>
-        </div>
-    `;
-    } else if (select.value == 'Казахстан') {
-        d.innerHTML += `
-        <div style="display:flex;">
-            <p class="wi">Ваш город</p>
-            <select >
-                // <option>Ростов-на-Дону</option>
-                // <option>Санкт-Петербург</option>
-                // <option>Екатеринбург</option>
-                // <option>Волгоград</option>
-                // <option>Каменск-Шахтинский</option>
-                // <option>Калач-на-Дону</option>
-                // <option>Владивосток</option>
-                // <option>Москва</option>
-                 <option>Астана</option>
-                // <option>Минск</option>
-                
-            </select>
-        </div>
-    `;
-    } else {
-        d.innerHTML += `
-        <div style="display:flex;">
-            <p class="wi">Ваш город</p>
-            <select >
-                // <option>Ростов-на-Дону</option>
-                // <option>Санкт-Петербург</option>
-                // <option>Екатеринбург</option>
-                // <option>Волгоград</option>
-                // <option>Каменск-Шахтинский</option>
-                // <option>Калач-на-Дону</option>
-                // <option>Владивосток</option>
-                // <option>Москва</option>
-                // <option>Астана</option>
-                 <option>Минск</option>
-                
-            </select>
-        </div>
-    `;
+
+    const selectCity = document.createElement("select");
+    selectCity.id = "selectCity";
+
+    
+    
+    for (const city of citiesOfRussia) {
+
+        const cityOption = document.createElement("option");
+        cityOption.text = city;
+        cityOption.value = city;
+        selectCity.appendChild(cityOption);
+
     }
+
+
+    d.appendChild(selectCity);
+
+
+    // if (select.value == 'Россия') {
+    //     d.innerHTML += `
+        
+    //     <div style="display:flex;">
+    //         <p class="wi">Ваш город</p>
+    //         <select >
+    //             <option></option>
+    //             <option></option>
+    //             <option></option>
+    //             <option></option>
+    //             <option>Каменск-Шахтинский</option>
+    //             <option>Калач-на-Дону</option>
+    //             <option>Владивосток</option>
+    //             <option>Москва</option>
+    //             // <option>Астана</option>
+    //             // <option>Минск</option>
+                
+    //         </select>
+    //     </div>
+    // `;
+    // } else if (select.value == 'Казахстан') {
+    //     d.innerHTML += `
+    //     <div style="display:flex;">
+    //         <p class="wi">Ваш город</p>
+    //         <select >
+    //             // <option>Ростов-на-Дону</option>
+    //             // <option>Санкт-Петербург</option>
+    //             // <option>Екатеринбург</option>
+    //             // <option>Волгоград</option>
+    //             // <option>Каменск-Шахтинский</option>
+    //             // <option>Калач-на-Дону</option>
+    //             // <option>Владивосток</option>
+    //             // <option>Москва</option>
+    //              <option>Астана</option>
+    //             // <option>Минск</option>
+                
+    //         </select>
+    //     </div>
+    // `;
+    // } else {
+    //     d.innerHTML += `
+    //     <div style="display:flex;">
+    //         <p class="wi">Ваш город</p>
+    //         <select >
+    //             // <option>Ростов-на-Дону</option>
+    //             // <option>Санкт-Петербург</option>
+    //             // <option>Екатеринбург</option>
+    //             // <option>Волгоград</option>
+    //             // <option>Каменск-Шахтинский</option>
+    //             // <option>Калач-на-Дону</option>
+    //             // <option>Владивосток</option>
+    //             // <option>Москва</option>
+    //             // <option>Астана</option>
+    //              <option>Минск</option>
+                
+    //         </select>
+    //     </div>
+    // `;
+    // }
 
 
 });
 
 
+
+selectCountry.addEventListener("change", () => {
+
+    console.log    ("Hello");
+
+
+})
 
