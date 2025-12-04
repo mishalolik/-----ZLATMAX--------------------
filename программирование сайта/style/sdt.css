@@ -320,3 +320,10 @@ h2 {
 #d div {
     align-items: center;
 }
+
+.void {
+    width: 80px;
+    height: 80px;
+    
+
+}

@@ -408,7 +408,7 @@ function getKnives(lastIndex, container, fop) {
         let div = document.createElement('div');
         div.style = 'box-shadow: 0px 4px 20px 0px #0000001A;cursor:pointer;width: 260px;height: 470px;align-items:center;font-family: Montserrat;font-weight: 600;font-size: 16px;background-color:white;'
         div.innerHTML = `
-        <img src='${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
+        <img src='../${knife.image}' style='width: 239.8355407714844px;height: 239.93333435058594px;margin-left:10px;'>
         
         <div style="display:flex;flex-direction:column;margin-left:10px">
         <h3 style="font-family: Montserrat;font-weight: 600;font-size: 20px;color:black;">${knife.name}</h3>
@@ -421,7 +421,7 @@ function getKnives(lastIndex, container, fop) {
         </div>
         <div style="display:flex;margin-left:10px;">
             <p style="font-family: Montserrat;font-weight: 600;font-size: 20px;color:black;">${knife.price} ₽</p>
-            <div style='display:flex;margin-left:100px;gap:15px;'><img src='images/a.svg'><img src="images/Group (1).svg"></div>
+            <div style='display:flex;margin-left:100px;gap:15px;'><img src='../images/a.svg'><img src="../images/Group (1).svg"></div>
             
             
         </div>
@@ -430,7 +430,7 @@ function getKnives(lastIndex, container, fop) {
     `
         div.addEventListener("click", () => {
             localStorage.setItem("knive_key", JSON.stringify(knife));
-            window.location.href = 'pages/page_1.html';
+            window.location.href = '../pages/page_1.html';
             
         })
 
