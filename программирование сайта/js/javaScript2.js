@@ -529,13 +529,8 @@ let lastIndex = 0;
 lastIndex = getKnives(lastIndex, d1, 4);
 
 let d10 = document.getElementById('d10');
-let d11 = document.getElementById('d11');
-lastIndex = getKnives(4, d10, 3);
-lastIndex = getKnives(6, d11, 4);
-let d12 = document.getElementById('d12')
-getNews(0, d12, 4)
-let d111 = document.getElementById('d111')
-groza(0, d111, 4)
+lastIndex = getKnives(4, d10, 4);
+
 
 
 // but1.addEventListener('click', () => {
