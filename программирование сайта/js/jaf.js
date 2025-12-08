@@ -238,6 +238,13 @@ z.addEventListener('click', () => {
     if (reviews[knife.id].length != 0) {
 
       for (const element of reviews[knife.id]) {
+        function prie(create, text, style, app) {
+          let a = document.createElement(create)
+          a.textContent = text;
+          a.style = style;
+          app.appendChild(a);
+
+        }
         let block = document.createElement("div");
         block.style = "display:flex;padding-top:30px;"
         let img = document.createElement('img')
@@ -247,12 +254,19 @@ z.addEventListener('click', () => {
         block.appendChild(img)
         let p = document.createElement('p')
         p.textContent = element.author
-        p.style = 'width:80px;height:80px;margin-left:30px;font-family: Montserrat;font-weight: 600;font-size: 18px;leading-trim: NONE;line-height: 100 %;'
         
+        p.style = 'width:80px;height:80px;font-family: Montserrat;font-weight: 600;font-size: 18px;leading-trim: NONE;line-height: 100 %;'
+        
+
+        prie('p' ,element.rating + "⭐", 'margin-left:30px;', block)
         block.appendChild(p)
         let date = document.createElement('p');
         date.textContent = element.date
-        date.style = "font-family: Montserrat;font-weight: 500;font-size: 14px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;background-color: #141414ff;"
+        date.style = "font-family: Montserrat;font-weight: 500;font-size: 14px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;color: #141414a;padding-bottom:52px;padding-left:550px;"
+        block.appendChild(date);
+
+        
+
 
         d.appendChild(block)
       }
@@ -332,6 +346,7 @@ gom.addEventListener('click', () => {
 
     if (selectCountry.value == "Россия") {
       cities = citiesOfRussia
+      
     }
 
     else if (selectCountry.value == "Казахстан") {
@@ -348,8 +363,20 @@ gom.addEventListener('click', () => {
       cityOption.text = city;
       cityOption.value = city;
       selectCity.appendChild(cityOption);
+      if (cityOption.value == "Москва") {
+        d.innerHTML = `
+        <hr>
+        <div>
+          <img src='1200px-Russian_Post 1.jpg'>
+        </div>
+        `
+      }
 
     }
+
+    
+
+    
 
   })
 
