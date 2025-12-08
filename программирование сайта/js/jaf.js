@@ -229,46 +229,59 @@ y.addEventListener('click', () => {
 
 });
 
+function prie(create, text, style, app) {
+  let a = document.createElement(create)
+  a.textContent = text;
+  a.style = style;
+  app.appendChild(a);
+
+}
+
 z.addEventListener('click', () => {
 
-  d.style = "display:flex;flex-direction:column;"
   d.innerHTML = ''
+
+
 
   if (knife.id in reviews) {
     if (reviews[knife.id].length != 0) {
 
       for (const element of reviews[knife.id]) {
-        function prie(create, text, style, app) {
-          let a = document.createElement(create)
-          a.textContent = text;
-          a.style = style;
-          app.appendChild(a);
+        let review_div = document.createElement("div");
+        review_div.style = "display: flex";
 
-        }
         let block = document.createElement("div");
-        block.style = "display:flex;padding-top:30px;"
+        block.style = "display:flex; flex-direction:column; padding-top:30px;"
         let img = document.createElement('img')
 
         img.src = 'i.webp'
-        img.style = 'width:80px;height:80px;'
-        block.appendChild(img)
-        let p = document.createElement('p')
-        p.textContent = element.author
-        
-        p.style = 'width:80px;height:80px;font-family: Montserrat;font-weight: 600;font-size: 18px;leading-trim: NONE;line-height: 100 %;'
-        
+        img.style = 'width:80px;height:80px; padding-top:30px; padding-right: 30px'
+        review_div.appendChild(img);
 
-        prie('p' ,element.rating + "⭐", 'margin-left:30px;', block)
-        block.appendChild(p)
+        let author_and_date_div = document.createElement('div');
+
+        author_and_date_div.className = "author_and_date_div";
+
+        let p = document.createElement('p');
+        p.textContent = element.author;
+        p.style = 'font-family: Montserrat;font-weight: 600;font-size: 18px;leading-trim: NONE;line-height: 100 %;'
+        author_and_date_div.appendChild(p)
+
+
         let date = document.createElement('p');
         date.textContent = element.date
-        date.style = "font-family: Montserrat;font-weight: 500;font-size: 14px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;color: #141414a;padding-bottom:52px;padding-left:550px;"
-        block.appendChild(date);
-
-        
+        date.style = "font-family: Montserrat;font-weight: 500;font-size: 14px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;color: #141414a;"
+        author_and_date_div.appendChild(date);
 
 
-        d.appendChild(block)
+        block.append(author_and_date_div)
+
+        prie('p', "⭐".repeat(element.rating), '', block)
+
+
+        review_div.appendChild(block)
+        d.appendChild(review_div);
+
       }
 
 
@@ -346,7 +359,7 @@ gom.addEventListener('click', () => {
 
     if (selectCountry.value == "Россия") {
       cities = citiesOfRussia
-      
+
     }
 
     else if (selectCountry.value == "Казахстан") {
@@ -374,9 +387,9 @@ gom.addEventListener('click', () => {
 
     }
 
-    
 
-    
+
+
 
   })
 

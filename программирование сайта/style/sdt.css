@@ -249,7 +249,6 @@ h2 {
 
 .no1 {
     width: 1565px;
-    height: 404px;
     box-shadow: 0px 4px 20px 0px #0000001A;
     background-color: #FEFEFE;
     margin-left: 181px;
@@ -259,6 +258,10 @@ h2 {
 
 
 
+}
+
+#d {
+    padding-bottom: 30px;
 }
 
 .nn {
@@ -317,9 +320,6 @@ h2 {
 
 }
 
-#d div {
-    align-items: center;
-}
 
 .void {
     width: 80px;
@@ -345,4 +345,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     padding-top: 120px;
+}
+
+
+.author_and_date_div {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    align-items: center;
 }
