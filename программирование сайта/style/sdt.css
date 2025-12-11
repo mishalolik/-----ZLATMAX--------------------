@@ -324,7 +324,7 @@ h2 {
 .void {
     width: 80px;
     height: 80px;
-    
+
 
 }
 
@@ -353,4 +353,21 @@ h2 {
     justify-content: space-between;
     width: 650px;
     align-items: center;
+}
+
+.bu {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 46px;
+    letter-spacing: 0%;
+    background-color: #000000;
+    color: #ffffff;
+    border: 0px;
+
+}
+
+.b {
+    margin-top: 11px;
+    padding-right: 583px;
 }

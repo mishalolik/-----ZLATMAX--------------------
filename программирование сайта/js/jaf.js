@@ -251,11 +251,11 @@ z.addEventListener('click', () => {
         review_div.style = "display: flex";
 
         let block = document.createElement("div");
-        block.style = "display:flex; flex-direction:column; padding-top:30px;"
-        let img = document.createElement('img')
+        block.style = "display:flex; flex-direction:column; padding-top:30px;";
+        let img = document.createElement('img');
 
-        img.src = 'i.webp'
-        img.style = 'width:80px;height:80px; padding-top:30px; padding-right: 30px'
+        img.src = 'i.webp';
+        img.style = 'width:80px;height:80px; padding-top:30px; padding-right: 30px';
         review_div.appendChild(img);
 
         let author_and_date_div = document.createElement('div');
@@ -264,8 +264,8 @@ z.addEventListener('click', () => {
 
         let p = document.createElement('p');
         p.textContent = element.author;
-        p.style = 'font-family: Montserrat;font-weight: 600;font-size: 18px;leading-trim: NONE;line-height: 100 %;'
-        author_and_date_div.appendChild(p)
+        p.style = 'font-family: Montserrat;font-weight: 600;font-size: 18px;leading-trim: NONE;line-height: 100 %;';
+        author_and_date_div.appendChild(p);
 
 
         let date = document.createElement('p');
@@ -274,11 +274,20 @@ z.addEventListener('click', () => {
         author_and_date_div.appendChild(date);
 
 
-        block.append(author_and_date_div)
+        block.append(author_and_date_div);
 
-        prie('p', "⭐".repeat(element.rating), '', block)
+        prie('p', "⭐".repeat(element.rating), '', block);
+        prie('p', element.text, 'width:650px', block);
+        let like = document.createElement('div');
+        like.style = 'display:flex;padding-top:10px;';
+        prie('p', 'Ответить', 'color: #E8AA31;', like);
+        let love = document.createElement('p')
+        love.textContent = '💛'
+        love.style = 'margin-left:490px;'
+        like.appendChild(love)
+        
 
-
+        block.appendChild(like)
         review_div.appendChild(block)
         d.appendChild(review_div);
 
@@ -287,7 +296,10 @@ z.addEventListener('click', () => {
 
     } else {
       d.innerHTML = `
-        abc
+        <div style="display:flex;">
+          <p class="b">У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!</p>
+          <button class="bu">Написать отзыв</button>
+        </div>
         `
     }
 
@@ -376,17 +388,11 @@ gom.addEventListener('click', () => {
       cityOption.text = city;
       cityOption.value = city;
       selectCity.appendChild(cityOption);
-      if (cityOption.value == "Москва") {
-        d.innerHTML = `
-        <hr>
-        <div>
-          <img src='1200px-Russian_Post 1.jpg'>
-        </div>
-        `
+
+      if (city.value == 'Москва') {
+        let a = document.createElement('hr')
       }
-
     }
-
 
 
 
