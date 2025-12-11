@@ -285,7 +285,7 @@ z.addEventListener('click', () => {
         love.textContent = '💛'
         love.style = 'margin-left:490px;'
         like.appendChild(love)
-        
+
 
         block.appendChild(like)
         review_div.appendChild(block)
@@ -388,16 +388,32 @@ gom.addEventListener('click', () => {
       cityOption.text = city;
       cityOption.value = city;
       selectCity.appendChild(cityOption);
-
-      if (city.value == 'Москва') {
-        let a = document.createElement('hr')
-      }
     }
 
 
 
 
   })
+
+  let imgDiv = document.createElement("div");
+  let img = document.createElement("img");
+
+
+  selectCity.addEventListener("change", () => {
+
+
+    if (selectCity.value == "Москва") {
+      img.src = "../";
+    } else if (selectCity.value == "Москва") {
+
+    } else {
+
+    }
+
+    d.appendChild(img);
+
+  })
+
 
 
 
