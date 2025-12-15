@@ -392,7 +392,6 @@ gom.addEventListener('click', () => {
                 margin-top: 30px;
                 `
 
-    divo.appendChild(hr)
     
   selectCountry.addEventListener("change", () => {
     let cities = [];
@@ -420,14 +419,6 @@ gom.addEventListener('click', () => {
       cityOption.value = city;
       selectCity.appendChild(cityOption);
     }
-    
-    
-
-    
-    
-    
-    imgDiv.appendChild(img);
-    d.appendChild(imgDiv)
 
 
   })
@@ -436,7 +427,8 @@ gom.addEventListener('click', () => {
 
 
   selectCity.addEventListener("change", () => {
-
+    divo.innerHTML = ""
+    divo.appendChild(hr)
 
     if (citiesOfRussia.includes(selectCity.value)) {
       
@@ -452,7 +444,7 @@ gom.addEventListener('click', () => {
       size(120, 60, img)
     }
 
-    
+      divo.appendChild(img);
 
   })
 
