@@ -349,6 +349,7 @@ gom.addEventListener('click', () => {
 
   const selectCity = document.createElement("select");
   selectCity.id = "selectCity";
+  selectCity.value = ''
   let padding = document.createElement('p');
   padding.textContent = name;
   block.appendChild(padding);
@@ -365,9 +366,39 @@ gom.addEventListener('click', () => {
     selectCity.appendChild(cityOption);
 
   }
+  function size(a, b, item) {
+    item.style = `width:${a}px;height:${b}px`
+
+    
+  }
+  function clearHTML(params) {
+    params.innerHTML = '';
+    
+
+    
+  }
+  function clearStyle(params) {
+    params.style = ''
+  }
+  let divo = document.createElement('div')
+  let imgDiv = document.createElement("div");
+  let img = document.createElement("img");
+  let hr = document.createElement('hr')
+    
+    hr.style = `
+                background-color: #14141426;
+                width: 746px;
+                border: 0px;
+                margin-top: 30px;
+                `
+
+    divo.appendChild(hr)
+    
   selectCountry.addEventListener("change", () => {
     let cities = [];
     selectCity.innerHTML = ''
+    selectCity.value = ''
+    
 
     if (selectCountry.value == "Россия") {
       cities = citiesOfRussia
@@ -389,28 +420,39 @@ gom.addEventListener('click', () => {
       cityOption.value = city;
       selectCity.appendChild(cityOption);
     }
+    
+    
 
-
+    
+    
+    
+    imgDiv.appendChild(img);
+    d.appendChild(imgDiv)
 
 
   })
 
-  let imgDiv = document.createElement("div");
-  let img = document.createElement("img");
+  
 
 
   selectCity.addEventListener("change", () => {
 
 
-    if (selectCity.value == "Москва") {
-      img.src = "../";
-    } else if (selectCity.value == "Москва") {
-
+    if (citiesOfRussia.includes(selectCity.value)) {
+      
+      img.src = "../pages/1200px-Russian_Post 1.jpg";
+      size(120, 60, img)
+    } else if(citiesOfCazaxcTaH.includes(selectCity.value)) {
+    
+      img.src = "../pages/kaz.jpg";
+      size(120, 60, img)
     } else {
-
+      
+      img.src = '../pages/belpochta_logo.jpg'
+      size(120, 60, img)
     }
 
-    d.appendChild(img);
+    
 
   })
 
@@ -481,7 +523,7 @@ gom.addEventListener('click', () => {
   // `;
   // }
 
-
+  d.appendChild(divo)
 });
 
 
