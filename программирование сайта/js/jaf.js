@@ -336,6 +336,8 @@ gom.addEventListener('click', () => {
     <div style="display:flex;padding-bottom:20px;padding-top:30px;">
             <p class="wi">Ваша страна</p>
             <select id="selectCountry">
+                            <option>Не выбрано</option>
+
                 <option>Россия</option>
                 <option>Казахстан</option>
                 <option>Белоруссия</option>
@@ -474,6 +476,7 @@ gom.addEventListener('click', () => {
   selectCity.addEventListener("change", () => {
     divo.innerHTML = ""
     divo.appendChild(hr)
+
     if (selectCity.value == 'Не выбрано') {
       clearOfPozitiveBlock(Pшка);
       hr.style = 'display:none;'
@@ -483,7 +486,11 @@ gom.addEventListener('click', () => {
 
     } else if (citiesOfRussia.includes(selectCity.value)) {
 
-
+      hr.style = 'display:block;margin: 0;margin-top: 30px;margin-bottom: 30px;width:1529.0000000000057px;'
+      hr.className = 'hr'
+      Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
+      styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
+      text()
 
       img.src = "../pages/1200px-Russian_Post 1.jpg";
       size(120, 60, img)
