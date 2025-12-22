@@ -328,9 +328,9 @@ let selectCountry = document.createElement("select");
 gom.addEventListener('click', () => {
   d.style = 'display:flex;flex-direction:column;'
 
-  const citiesOfRussia = ["Ростов-на-Дону", "Санкт-Петербург", "Екатеринбург", "Волгоград", "Каменск-Шахтинский", "Калач-на-Дону", "Владивосток", "Москва"];
-  const citiesOfCazaxcTaH = ["Астана"];
-  const citiesOfBelorussia = ["Минск"];
+  const citiesOfRussia = ['Не выбрано', "Ростов-на-Дону", "Санкт-Петербург", "Екатеринбург", "Волгоград", "Каменск-Шахтинский", "Калач-на-Дону", "Владивосток", "Москва"];
+  const citiesOfCazaxcTaH = ['Не выбрано', "Астана"];
+  const citiesOfBelorussia = ['Не выбрано', "Минск"];
 
   d.innerHTML = `
     <div style="display:flex;padding-bottom:20px;padding-top:30px;">
@@ -358,47 +358,73 @@ gom.addEventListener('click', () => {
 
 
 
+
+
   for (const city of citiesOfRussia) {
+
 
     const cityOption = document.createElement("option");
     cityOption.text = city;
     cityOption.value = city;
     selectCity.appendChild(cityOption);
 
+
+
   }
   function size(a, b, item) {
     item.style = `width:${a}px;height:${b}px`
 
-    
+
   }
   function clearHTML(params) {
     params.innerHTML = '';
-    
 
-    
+
+
   }
   function clearStyle(params) {
     params.style = ''
   }
+  function clearOfPozitiveBlock(params) {
+    params.style = 'display:none;'
+  }
+  function styleEYE(name) {
+    name.style = 'display: block;'
+  }
+  function styleText(params, pozitiveBlock) {
+    pozitiveBlock.style = params;
+    
+    
+    
+  }
+  function forStyleText(number, params, pozitiveBlock) {
+    for (let i = 0;i < number; i++) {
+      styleText(params, pozitiveBlock)
+    }
+
+  }
+  function text() {
+    mp.textContent = '1-8 дней'
+    mp.style = 'color: #141414;margin-top:15px;margin-left:1250px;display:flex;font-family: Montserrat;font-weight: 500;font-size: 18px;leading-trim: NONE;line-height: 100%;'
+  }
+
   let divo = document.createElement('div')
   let imgDiv = document.createElement("div");
   let img = document.createElement("img");
   let hr = document.createElement('hr')
-    
-    hr.style = `
-                background-color: #14141426;
-                width: 746px;
-                border: 0px;
-                margin-top: 30px;
-                `
+  let Pшка = document.createElement('p');
+  let mp = document.createElement('p')
+  imgDiv.style = 'display:flex;'
+  hr.style = 'display:none;'
+  
 
-    divo.appendChild(hr)
-    
+  
+
   selectCountry.addEventListener("change", () => {
     let cities = [];
     selectCity.innerHTML = ''
-    selectCity.value = ''
-    
+
+
 
     if (selectCountry.value == "Россия") {
       cities = citiesOfRussia
@@ -420,47 +446,75 @@ gom.addEventListener('click', () => {
       cityOption.value = city;
       selectCity.appendChild(cityOption);
     }
-    
-    
+
+
+
+
 
     
     
     
-    imgDiv.appendChild(img);
-    d.appendChild(imgDiv)
 
 
   })
 
-  
+
+selectCity.addEventListener("change", () => {
 
 
-  selectCity.addEventListener("change", () => {
+    if (selectCity.value == 'Не выбрано') {
+      clearOfPozitiveBlock(Pшка);
+      hr.style = 'display:none;'
+      img.style = 'display:none;'
+      mp.style = 'display:none;'
 
-
-    if (citiesOfRussia.includes(selectCity.value)) {
+    } else if (citiesOfRussia.includes(selectCity.value)) {
+      hr.style = 'display:block;margin: 0;margin-top: 30px;margin-bottom: 30px;width:1529.0000000000057px;'
+      hr.className = 'hr'
+      Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
+      styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
+      text()
       
+
       img.src = "../pages/1200px-Russian_Post 1.jpg";
       size(120, 60, img)
-    } else if(citiesOfCazaxcTaH.includes(selectCity.value)) {
-    
+    } else if (citiesOfCazaxcTaH.includes(selectCity.value)) {
+      hr.style = 'display:block;margin: 0;margin-top: 30px;margin-bottom: 30px;width:1529.0000000000057px;'
+      hr.className = 'hr'
+      Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
+      styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
+      text()
+      
+
       img.src = "../pages/kaz.jpg";
       size(120, 60, img)
     } else {
+      hr.style = 'display:block;margin: 0;margin-top: 30pxmargin-bottom: 30px;width:1529.0000000000057px;'
+      hr.className = 'hr'
+      Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
+      
+      styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
+      text()
       
       img.src = '../pages/belpochta_logo.jpg'
       size(120, 60, img)
     }
 
-    
+
 
   })
 
-
-
-
-
   block.appendChild(selectCity);
+divo.appendChild(hr)
+imgDiv.appendChild(img);
+    d.appendChild(imgDiv)
+    imgDiv.appendChild(mp)
+    imgDiv.appendChild(Pшка);
+
+  
+  
+  
+  
   d.appendChild(block);
 
   // if (select.value == 'Россия') {
