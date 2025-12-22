@@ -393,12 +393,12 @@ gom.addEventListener('click', () => {
   }
   function styleText(params, pozitiveBlock) {
     pozitiveBlock.style = params;
-    
-    
-    
+
+
+
   }
   function forStyleText(number, params, pozitiveBlock) {
-    for (let i = 0;i < number; i++) {
+    for (let i = 0; i < number; i++) {
       styleText(params, pozitiveBlock)
     }
 
@@ -416,9 +416,12 @@ gom.addEventListener('click', () => {
   let mp = document.createElement('p')
   imgDiv.style = 'display:flex;'
   hr.style = 'display:none;'
-  
 
-  
+
+
+
+
+
 
   selectCountry.addEventListener("change", () => {
     let cities = [];
@@ -451,30 +454,36 @@ gom.addEventListener('click', () => {
 
 
 
-    
-    
-    
+
+
+
+
+
 
 
   })
 
 
-selectCity.addEventListener("change", () => {
 
 
+
+
+
+
+
+  selectCity.addEventListener("change", () => {
+    divo.innerHTML = ""
+    divo.appendChild(hr)
     if (selectCity.value == 'Не выбрано') {
       clearOfPozitiveBlock(Pшка);
       hr.style = 'display:none;'
       img.style = 'display:none;'
       mp.style = 'display:none;'
 
+
     } else if (citiesOfRussia.includes(selectCity.value)) {
-      hr.style = 'display:block;margin: 0;margin-top: 30px;margin-bottom: 30px;width:1529.0000000000057px;'
-      hr.className = 'hr'
-      Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
-      styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
-      text()
-      
+
+
 
       img.src = "../pages/1200px-Russian_Post 1.jpg";
       size(120, 60, img)
@@ -484,7 +493,7 @@ selectCity.addEventListener("change", () => {
       Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
       styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
       text()
-      
+
 
       img.src = "../pages/kaz.jpg";
       size(120, 60, img)
@@ -492,29 +501,35 @@ selectCity.addEventListener("change", () => {
       hr.style = 'display:block;margin: 0;margin-top: 30pxmargin-bottom: 30px;width:1529.0000000000057px;'
       hr.className = 'hr'
       Pшка.textContent = Math.round(knife.bonusPoints * 50 / 10) + ' ₽'
-      
+
       styleText('margin-top:15px;margin-left:30px;display:flex;font-family: Montserrat;font-weight: 700;font-size: 20px;leading-trim: NONE;line-height: 100%;letter-spacing: 0%;', Pшка);
       text()
-      
+
       img.src = '../pages/belpochta_logo.jpg'
       size(120, 60, img)
     }
 
 
 
-  })
+
+    divo.appendChild(img);
+    divo.appendChild(mp)
+    divo.appendChild(Pшка);
+    divo.appendChild(hr)
+    d.appendChild(divo)
+  });
 
   block.appendChild(selectCity);
-divo.appendChild(hr)
-imgDiv.appendChild(img);
-    d.appendChild(imgDiv)
-    imgDiv.appendChild(mp)
-    imgDiv.appendChild(Pшка);
 
-  
-  
-  
-  
+  imgDiv.appendChild(img);
+
+
+  d.appendChild(imgDiv)
+
+
+
+
+
   d.appendChild(block);
 
   // if (select.value == 'Россия') {
@@ -577,7 +592,7 @@ imgDiv.appendChild(img);
   // `;
   // }
 
-  d.appendChild(divo)
+  
 });
 
 
